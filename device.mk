@@ -95,6 +95,10 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.recovery.qcom.rc
 
+# RCS
+PRODUCT_PACKAGES += \
+    RcsService
+
 # Shipping API
 BOARD_SHIPPING_API_LEVEL := 30
 PRODUCT_SHIPPING_API_LEVEL := 30
