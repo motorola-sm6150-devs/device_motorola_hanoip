@@ -12,6 +12,9 @@ ro.af.client_heap_size_kbyte=7168
 # Google Assistant
 ro.vendor.hw.gabutton=true
 
+# IMS
+ro.qcom.ims.use_moto_vt_ext=true
+
 # LMKD
 ro.lmk.file_low_percentage=20
 ro.lmk.kill_heaviest_task=true
