@@ -1,0 +1,2 @@
+# Camera props
+get_prop(hal_camera, moto_camera_config_prop)
