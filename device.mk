@@ -70,6 +70,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
+# Camera
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.vendor.camera.privapp.list=com.motorola.camera3
+
 # Dalvik
 PRODUCT_PRODUCT_PROPERTIES += \
     dalvik.vm.isa.arm64.variant=cortex-a76 \
