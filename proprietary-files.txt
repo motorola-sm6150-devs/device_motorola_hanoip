@@ -80,7 +80,7 @@ framework/moto-core_services.jar
 framework/moto-settings.jar
 product/app/MotCamera3AI/MotCamera3AI.apk;PRESIGNED
 product/etc/init/init.motcamera3.lens.rc
-product/priv-app/MotCamera4/MotCamera4.apk;PRESIGNED
+product/priv-app/MotCamera4/MotCamera4.apk;OVERRIDES=Aperture;PRESIGNED
 system_ext/bin/motsettings
 system_ext/etc/public.libraries-motocamera.txt
 system_ext/framework/com.motorola.androidx.camera.extensions.jar
