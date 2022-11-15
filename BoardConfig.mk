@@ -89,5 +89,11 @@ $(foreach p, $(call to-upper, $(SSI_PARTITIONS)), \
 $(foreach p, $(call to-upper, $(TREBLE_PARTITIONS)), \
     $(eval BOARD_$(p)IMAGE_PARTITION_RESERVED_SIZE := 52428800))
 
+# Recovery
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
+
 # Inherit from the proprietary version
 include vendor/motorola/hanoip/BoardConfigVendor.mk
