@@ -52,5 +52,7 @@ BOARD_BOOT_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 
+include device/motorola/hanoip-kernel/BoardConfigKernel.mk
+
 # Inherit from the proprietary version
 include vendor/motorola/hanoip/BoardConfigVendor.mk
