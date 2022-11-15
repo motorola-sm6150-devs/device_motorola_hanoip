@@ -17,6 +17,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
     dalvik.vm.isa.arm64.variant=cortex-a76 \
     dalvik.vm.isa.arm.variant=cortex-a55
 
+# Dynamic Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
