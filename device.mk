@@ -61,6 +61,15 @@ PRODUCT_PRODUCT_PROPERTIES += \
 TARGET_SCREEN_HEIGHT := 2460
 TARGET_SCREEN_WIDTH := 1080
 
+# Boot control
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.1-impl-qti \
+    android.hardware.boot@1.1-impl-qti.recovery \
+    android.hardware.boot@1.1-service
+
+PRODUCT_PACKAGES_DEBUG += \
+    bootctl
+
 # Dalvik
 PRODUCT_PRODUCT_PROPERTIES += \
     dalvik.vm.isa.arm64.variant=cortex-a76 \
@@ -89,7 +98,8 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/motorola
+    hardware/motorola \
+    hardware/qcom-caf/bootctrl
 
 # VNDK
 PRODUCT_EXTRA_VNDK_VERSIONS := 30
