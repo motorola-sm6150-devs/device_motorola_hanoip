@@ -1,0 +1,89 @@
+# Audio
+qcom.hw.aac.encoder=true
+tunnel.audio.encode=true
+use.voice.path.for.pcm.voip=true
+
+# Bluetooh
+ro.bluetooth.library_name=libbluetooth_qti.so
+
+# Charger
+ro.charger.enable_suspend=1
+
+# CoreSight
+persist.debug.coresight.config=stm-events
+
+# Data
+persist.data.df.agg.dl_pkt=10
+persist.data.df.agg.dl_size=4096
+persist.data.df.dev_name=rmnet_usb0
+persist.data.df.dl_mode=5
+persist.data.df.iwlan_mux=9
+persist.data.df.mux_count=8
+persist.data.df.ul_mode=5
+persist.data.wda.enable=true
+persist.rmnet.data.enable=true
+persist.vendor.data.mode=concurrent
+ro.vendor.use_data_netmgrd=true
+
+# GNSS
+persist.vendor.overlay.izat.optin=rro
+sys.qca1530=detect
+
+# Graphics
+persist.sys.force_sw_gles=1
+ro.kernel.qemu.gles=0
+
+# IMS
+ro.vendor.qti.va_aosp.support=1
+
+# MTE
+arm64.memtag.process.system_server=off
+
+# Media
+media.aac_51_output_enabled=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-fma2dp=true
+media.stagefright.enable-http=true
+media.stagefright.enable-player=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-scan=true
+mmp.enable.3g2=true
+persist.mm.enable.prefetch=true
+ro.media.recorder-max-base-layer-fps=60
+
+# NFC
+ro.nfc.port=I2C
+
+# PackageManager
+dev.pm.dyn_samplingrate=1
+
+# RIL
+DEVICE_PROVISIONED=1
+persist.rild.nitz_long_ons_0=
+persist.rild.nitz_long_ons_1=
+persist.rild.nitz_long_ons_2=
+persist.rild.nitz_long_ons_3=
+persist.rild.nitz_plmn=
+persist.rild.nitz_short_ons_0=
+persist.rild.nitz_short_ons_1=
+persist.rild.nitz_short_ons_2=
+persist.rild.nitz_short_ons_3=
+persist.vendor.radio.atfwd.start=true
+ril.subscription.types=NV,RUIM
+rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
+
+# Sensors
+persist.vendor.sensors.enable.mag_filter=true
+
+# SurfaceFlinger
+debug.sf.enable_hwc_vds=1
+debug.sf.latch_unsignaled=1
+
+# Time
+persist.timed.enable=true
+
+# WFD
+persist.sys.wfd.virtual=0
+
+# WiFi
+config.disable_rtt=true

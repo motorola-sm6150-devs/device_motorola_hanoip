@@ -1,0 +1,11 @@
+# Audio
+audio.deep_buffer.media=true
+audio.offload.disable=false
+audio.offload.gapless.enabled=false
+audio.offload.min.duration.secs=60
+audio.offload.video=false
+persist.audio.endcall.delay=250
+persist.audio.qti.flac.decoder=true
+
+# DPM
+persist.vendor.dpm.feature=11
