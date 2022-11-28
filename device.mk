@@ -52,6 +52,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.apex.updatable=false
 
+# Audio
+TARGET_EXCLUDES_AUDIOFX := true
+
 # Bionic
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.bionic.cpu_variant=cortex-a76 \
