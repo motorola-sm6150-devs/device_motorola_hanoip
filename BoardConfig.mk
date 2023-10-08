@@ -54,5 +54,40 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 
 include device/motorola/hanoip-kernel/BoardConfigKernel.mk
 
+# Partitions
+BOARD_USES_METADATA_PARTITION := true
+BOARD_USES_RECOVERY_AS_BOOT := true
+
+BOARD_FLASH_BLOCK_SIZE := 262144
+BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
+BOARD_DTBOIMG_PARTITION_SIZE := 25165824
+BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 67108864
+
+SSI_PARTITIONS := product system system_ext
+TREBLE_PARTITIONS := vendor
+ALL_PARTITIONS := $(SSI_PARTITIONS) $(TREBLE_PARTITIONS)
+
+$(foreach p, $(call to-upper, $(ALL_PARTITIONS)), \
+    $(eval BOARD_$(p)IMAGE_FILE_SYSTEM_TYPE := ext4) \
+    $(eval TARGET_COPY_OUT_$(p) := $(call to-lower, $(p))))
+
+# Partitions (Dynamic)
+BOARD_SUPER_PARTITION_SIZE := 10804527104
+BOARD_SUPER_PARTITION_GROUPS := mot_dynamic_partitions
+BOARD_MOT_DYNAMIC_PARTITIONS_SIZE := 10800332800
+BOARD_MOT_DYNAMIC_PARTITIONS_PARTITION_LIST := $(ALL_PARTITIONS)
+
+ifneq ($(WITH_GMS),true)
+$(foreach p, $(call to-upper, $(SSI_PARTITIONS)), \
+    $(eval BOARD_$(p)IMAGE_EXTFS_INODE_COUNT := -1))
+SSI_PARTITIONS_RESERVED_SIZE := 1048576000
+else
+SSI_PARTITIONS_RESERVED_SIZE := 52428800
+endif
+$(foreach p, $(call to-upper, $(SSI_PARTITIONS)), \
+    $(eval BOARD_$(p)IMAGE_PARTITION_RESERVED_SIZE := $(SSI_PARTITIONS_RESERVED_SIZE)))
+$(foreach p, $(call to-upper, $(TREBLE_PARTITIONS)), \
+    $(eval BOARD_$(p)IMAGE_PARTITION_RESERVED_SIZE := 52428800))
+
 # Inherit from the proprietary version
 include vendor/motorola/hanoip/BoardConfigVendor.mk
