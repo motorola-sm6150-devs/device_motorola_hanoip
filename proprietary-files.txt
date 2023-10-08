@@ -170,7 +170,9 @@ system_ext/lib64/vendor.qti.ims.rcsconfig@1.1.so
 system_ext/lib64/vendor.qti.ims.rcsconfig@2.0.so
 system_ext/lib64/vendor.qti.ims.rcsconfig@2.1.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
-system_ext/priv-app/ims/ims.apk
+
+# Radio (IMS) - from patched source
+system_ext/priv-app/ims/ims.apk|ee893e652219e22bb8b5d747db34a020feb1c9cd
 
 # Radio (Moto Telephony Framework)
 etc/permissions/moto-telephony.xml
