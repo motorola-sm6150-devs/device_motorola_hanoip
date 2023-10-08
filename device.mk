@@ -7,6 +7,10 @@
 # Inherit the proprietary files
 $(call inherit-product, vendor/motorola/hanoip/hanoip-vendor.mk)
 
+# AAPT
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
 # A/B
 AB_OTA_UPDATER := true
 
