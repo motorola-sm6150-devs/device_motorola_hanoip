@@ -34,7 +34,9 @@ TARGET_SCREEN_DENSITY := 440
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
+BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_KERNEL_CMDLINE := \
     console=ttyMSM0,115200n8 \
     androidboot.hardware=qcom \
@@ -58,7 +60,13 @@ BOARD_BOOT_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 
-include device/motorola/hanoip-kernel/BoardConfigKernel.mk
+TARGET_KERNEL_CONFIG := \
+    vendor/sdmsteppe-perf_defconfig \
+    vendor/ext_config/moto-sdmsteppe.config \
+    vendor/ext_config/moto-sdmmagpie-hanoip.config \
+    vendor/debugfs.config \
+    vendor/ext_config/lineage-moto-sdmsteppe.config
+TARGET_KERNEL_SOURCE := kernel/motorola/sm6150
 
 # Partitions
 BOARD_USES_METADATA_PARTITION := true
