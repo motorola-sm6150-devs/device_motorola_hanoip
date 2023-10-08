@@ -7,6 +7,41 @@
 # Inherit the proprietary files
 $(call inherit-product, vendor/motorola/hanoip/hanoip-vendor.mk)
 
+# A/B
+AB_OTA_UPDATER := true
+
+AB_OTA_PARTITIONS := \
+    boot \
+    dtbo \
+    product \
+    system \
+    system_ext \
+    vbmeta \
+    vbmeta_system \
+    vendor \
+    vendor_boot
+
+AB_OTA_POSTINSTALL_CONFIG += \
+    RUN_POSTINSTALL_system=true \
+    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
+    FILESYSTEM_TYPE_system=ext4 \
+    POSTINSTALL_OPTIONAL_system=true
+
+AB_OTA_POSTINSTALL_CONFIG += \
+    RUN_POSTINSTALL_vendor=true \
+    POSTINSTALL_PATH_vendor=bin/checkpoint_gc \
+    FILESYSTEM_TYPE_vendor=ext4 \
+    POSTINSTALL_OPTIONAL_vendor=true
+
+PRODUCT_PACKAGES += \
+    checkpoint_gc \
+    otapreopt_script
+
+PRODUCT_PACKAGES += \
+    update_engine \
+    update_engine_sideload \
+    update_verifier
+
 # Bionic
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.bionic.cpu_variant=cortex-a76 \
