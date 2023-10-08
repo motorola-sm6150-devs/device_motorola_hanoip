@@ -1,0 +1,28 @@
+# Audio
+aaudio.hw_burst_min_usec=2000
+aaudio.mmap_exclusive_policy=2
+aaudio.mmap_policy=2
+af.fast_track_multiplier=1
+audio.sys.mute.latency.factor=2
+audio.sys.noisy.broadcast.delay=500
+audio.sys.offload.pstimeout.secs=3
+audio.sys.routing.latency=0
+ro.af.client_heap_size_kbyte=7168
+
+# Google Assistant
+ro.vendor.hw.gabutton=true
+
+# LMKD
+ro.lmk.file_low_percentage=20
+ro.lmk.kill_heaviest_task=true
+ro.lmk.pgscan_limit=3000
+ro.lmk.psi_complete_stall_ms=80
+ro.lmk.psi_partial_stall_ms=50
+ro.lmk.swap_free_low_percentage=10
+ro.lmk.swap_util_max=90
+ro.lmk.thrashing_limit=50
+ro.lmk.thrashing_limit_decay=25
+ro.lmk.threshold_decay=50
+
+# Media
+media.stagefright.audio.deep=false
