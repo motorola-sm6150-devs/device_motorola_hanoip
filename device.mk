@@ -73,6 +73,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
