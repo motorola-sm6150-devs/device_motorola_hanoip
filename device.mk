@@ -44,6 +44,10 @@ PRODUCT_PACKAGES += \
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
+# Apex
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.apex.updatable=false
+
 # Bionic
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.bionic.cpu_variant=cortex-a76 \
