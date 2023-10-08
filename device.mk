@@ -62,6 +62,10 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.recovery.qcom.rc
 
+# Shipping API
+BOARD_SHIPPING_API_LEVEL := 30
+PRODUCT_SHIPPING_API_LEVEL := 30
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
