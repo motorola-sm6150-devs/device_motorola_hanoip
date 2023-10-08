@@ -23,6 +23,7 @@ TARGET_OTA_ASSERT_DEVICE := hanoip
 
 # Board
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
+TARGET_BOARD_PLATFORM := sm6150
 TARGET_BOOTLOADER_BOARD_NAME := hanoip
 
 # Inherit from the proprietary version
