@@ -107,3 +107,5 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
 
 # Inherit from the proprietary version
 include vendor/motorola/hanoip/BoardConfigVendor.mk
+include vendor/motorola/hanoip-firmware/BoardConfigVendor.mk
+include vendor/motorola/hanoip-vendor/BoardConfigVendor.mk
