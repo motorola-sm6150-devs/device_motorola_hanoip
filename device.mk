@@ -42,6 +42,8 @@ PRODUCT_PACKAGES += \
     update_engine_sideload \
     update_verifier
 
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+
 # Bionic
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.bionic.cpu_variant=cortex-a76 \
