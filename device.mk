@@ -20,6 +20,11 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    init.recovery.qcom.rc
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
